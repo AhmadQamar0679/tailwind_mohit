@@ -6,6 +6,6 @@ class Student(models.Model):
     age=models.IntegerField()
     email=models.EmailField(unique=True)
     enrollment_date=models.DateTimeField(auto_now_add=True)
-    
+    city=models.CharField(max_length=100,default='unknown')
     def __str__(self):
-        return self.name
+        return self.name 
